@@ -24,7 +24,20 @@ public class Person {
         this(null, null, null);
     }
 
-    public Person(String firstName, String lastName, String emailAddress) {
+
+    public Person(String firstName, String lastName) {
+        this.firstName = new SimpleStringProperty(firstName);
+        this.lastName = new SimpleStringProperty(lastName);
+        this.emailAddress = new SimpleStringProperty("email");
+
+        // Some initial dummy data, just for convenient testing.
+        this.street = new SimpleStringProperty("some street");
+        this.postalCode = new SimpleIntegerProperty(1234);
+        this.city = new SimpleStringProperty("some city");
+        this.birthday = new SimpleObjectProperty<LocalDate>(LocalDate.of(1999, 2, 21));
+    }
+
+    public Person(String emailAddress, String firstName, String lastName) {
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
         this.emailAddress = new SimpleStringProperty(emailAddress);

@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.timeOrganizer.model.Person;
 import com.timeOrganizer.util.DataBaseConnection;
 import com.timeOrganizer.view.PersonOverviewController;
+import com.timeOrganizer.view.StartController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,16 +22,8 @@ public class Main extends Application {
     private BorderPane rootLayout;
 
     public Main() {
-        personData.add(new Person("Hans", "Muster", "email"));
-        personData.add(new Person("Ruth", "Mueller", "email"));
-        personData.add(new Person("Heinz", "Kurz", "email"));
-        personData.add(new Person("Cornelia", "Meier", "email"));
-        personData.add(new Person("Werner", "Meyer", "email"));
-        personData.add(new Person("Lydia", "Kunz", "email"));
-        personData.add(new Person("Anna", "Best", "email"));
-        personData.add(new Person("Stefan", "Meier", "email"));
-        personData.add(new Person("Martin", "Mueller", "email"));
         DataBaseConnection dbHandle = new DataBaseConnection();
+        personData = dbHandle.ExecuteQuery();
 
     }
 
@@ -42,10 +35,27 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AddressApp");
-
         initRootLayout();
+        showStartPage();
+//        showPersonOverview();
+    }
 
-        showPersonOverview();
+    private void showStartPage() {
+        try {
+            // Load person overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/Start.fxml"));
+            AnchorPane Start = loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(Start);
+
+            // Give the controller access to the main app.
+            StartController controller = loader.getController();
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**

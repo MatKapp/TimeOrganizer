@@ -26,7 +26,7 @@ public class PersonOverviewController {
     @FXML
     private Label lastNameLabel;
     @FXML
-    private Label streetLabel;
+    private Label emailLabel;
     @FXML
     private Label postalCodeLabel;
     @FXML
@@ -45,18 +45,12 @@ public class PersonOverviewController {
             // Fill the labels with info from the person object.
             firstNameLabel.setText(person.getFirstName());
             lastNameLabel.setText(person.getLastName());
-            //   streetLabel.setText(person.getStreet());
-            //   postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
-            cityLabel.setText(person.getCity());
-            birthdayLabel.setText(DateUtil.format(person.getBirthday()));
+            emailLabel.setText(person.getEmailAddress());
         } else {
             // Person is null, remove all the text.
             firstNameLabel.setText("");
             lastNameLabel.setText("");
-            //   streetLabel.setText("");
-            //   postalCodeLabel.setText("");
-            cityLabel.setText("");
-            birthdayLabel.setText("");
+            emailLabel.setText("");
         }
     }
 

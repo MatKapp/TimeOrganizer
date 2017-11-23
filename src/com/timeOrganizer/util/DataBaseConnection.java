@@ -1,19 +1,24 @@
 package com.timeOrganizer.util;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Observable;
 
-import com.microsoft.sqlserver.jdbc.*;
+import com.timeOrganizer.model.Person;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 
 public class DataBaseConnection {
 
-    // Connect to your database.
-    // Replace server name, username, and password with your credentials
-    public DataBaseConnection() {
+    public static Connection connection;
 
+
+    public static void Connect() {
         String connectionString = "jdbc:sqlserver://localhost:1433;" +
                 "databaseName=TimeOrganizer_db;user=Mateusz;password=password;";
         // Declare the JDBC objects.
-        Connection connection = null;
 
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -21,16 +26,26 @@ public class DataBaseConnection {
 
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-//            if (connection != null) try { connection.close(); } catch(Exception e) {}
         }
+    }
+
+    public static Connection getConnection() {
+        return connection;
+    }
+
+    public static void setConnection(Connection connection) {
+        DataBaseConnection.connection = connection;
+    }
+
+    public static ObservableList<Person> ExecuteQuery() {
         //STEP 4: Execute a query
         System.out.println("Creating statement...");
         Statement stmt = null;
         ResultSet rs = null;
+        ObservableList<Person> personData = FXCollections.observableArrayList();
         try {
             stmt = connection.createStatement();
-            String sql = "SELECT * FROM dbo.UserTable";
+            String sql = "SELECT * FROM dbo.UsersTable";
             rs = stmt.executeQuery(sql);
         } catch (Exception e) {
             e.printStackTrace();
@@ -39,10 +54,12 @@ public class DataBaseConnection {
             //STEP 5: Extract data from result set
             while (rs.next()) {
                 //Retrieve by column name
-                String FirstName = rs.getString(1);
-                String LastName = rs.getString(2);
-
+                personData.add(new Person(rs.getString(1), rs.getString(2), rs.getString(3)));
+                String Email = rs.getString(1);
+                String FirstName = rs.getString(2);
+                String LastName = rs.getString(3);
                 //Display values
+                System.out.print("Email: " + Email);
                 System.out.print("FirstName: " + FirstName);
                 System.out.print(", LastName: " + LastName);
 
@@ -51,6 +68,15 @@ public class DataBaseConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return personData;
+    }
+
+    // Connect to your database.
+    // Replace server name, username, and password with your credentials
+    public DataBaseConnection() {
+
+        Connect();
+
 
     }
 }
