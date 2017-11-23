@@ -3,6 +3,7 @@ package com.timeOrganizer;
 import java.io.IOException;
 
 import com.timeOrganizer.model.Person;
+import com.timeOrganizer.util.DataBaseConnection;
 import com.timeOrganizer.view.PersonOverviewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -29,6 +30,8 @@ public class Main extends Application {
         personData.add(new Person("Anna", "Best", "email"));
         personData.add(new Person("Stefan", "Meier", "email"));
         personData.add(new Person("Martin", "Mueller", "email"));
+        DataBaseConnection dbHandle = new DataBaseConnection();
+
     }
 
     public ObservableList<Person> getPersonData() {
