@@ -37,7 +37,7 @@ public class DataBaseConnection {
         DataBaseConnection.connection = connection;
     }
 
-    public static ObservableList<Person> ExecuteQuery() {
+    public static ObservableList<Person> GetUsers() {
         //STEP 4: Execute a query
         System.out.println("Creating statement...");
         Statement stmt = null;

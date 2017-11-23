@@ -33,7 +33,7 @@ public class StartController {
         System.out.println("Udalo sie");
         DataBaseConnection.Connect();
         Connection conn = DataBaseConnection.getConnection();
-        ObservableList<Person> Persons = DataBaseConnection.ExecuteQuery();
+        ObservableList<Person> Persons = DataBaseConnection.GetUsers();
         for (Person person : Persons) {
             if (person.getFirstName().replaceAll("\\s", "").equals(UserLogInTextField.getText())) {
                 //showPersonOverviewPage(event);

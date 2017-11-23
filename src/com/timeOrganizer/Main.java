@@ -2,8 +2,10 @@ package com.timeOrganizer;
 
 import java.io.IOException;
 
+import com.timeOrganizer.model.Adventure;
 import com.timeOrganizer.model.Person;
 import com.timeOrganizer.util.DataBaseConnection;
+import com.timeOrganizer.view.AdventureOverviewController;
 import com.timeOrganizer.view.PersonOverviewController;
 import com.timeOrganizer.view.StartController;
 import javafx.application.Application;
@@ -18,12 +20,13 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     private ObservableList<Person> personData = FXCollections.observableArrayList();
+    private ObservableList<Adventure> adventureData = FXCollections.observableArrayList();
     private Stage primaryStage;
     private BorderPane rootLayout;
 
     public Main() {
         DataBaseConnection dbHandle = new DataBaseConnection();
-        personData = dbHandle.ExecuteQuery();
+        personData = DataBaseConnection.GetUsers();
 
     }
 
@@ -31,13 +34,20 @@ public class Main extends Application {
         return personData;
     }
 
+
+    public ObservableList<Adventure> getAdventureData() {
+        return adventureData;
+    }
+
+
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AddressApp");
         initRootLayout();
-        showStartPage();
-//        showPersonOverview();
+        adventureData.add(new Adventure("U Bazyla", "nie wiem"));
+//        showStartPage();
+        showAdventureOverview();
     }
 
     private void showStartPage() {
@@ -98,6 +108,24 @@ public class Main extends Application {
         }
     }
 
+
+    public void showAdventureOverview() {
+        try {
+            // Load adventure overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/AdventureOverview.fxml"));
+            AnchorPane adventureOverview = loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(adventureOverview);
+
+            // Give the controller access to the main app.
+            AdventureOverviewController controller = loader.getController();
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * Returns the main stage.
      *
