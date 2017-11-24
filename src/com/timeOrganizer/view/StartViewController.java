@@ -23,6 +23,11 @@ public class StartViewController {
     }
 
     @FXML
+    private void adventureCreatorButtonClicked() {
+        main.showAdventureCretorOverview();
+    }
+
+    @FXML
     private void adventuresButtonClicked() {
         main.showAdventureOverview();
     }

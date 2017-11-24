@@ -6,17 +6,17 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ObservableValue;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Adventure {
-    private final IntegerProperty AdventureId;
+    private final Integer AdventureId;
     private final Date AdventureDateTime;
     private final StringProperty Name;
     private final StringProperty Address;
 
 
     public Adventure(int adventureId, Date adventureDateTime, String name, String address) {
-        AdventureId = new SimpleIntegerProperty(adventureId);
+        AdventureId = adventureId;
         AdventureDateTime = adventureDateTime;
         Name = new SimpleStringProperty(name);
         Address = new SimpleStringProperty(address);
@@ -26,8 +26,17 @@ public class Adventure {
         this.Name = new SimpleStringProperty(name);
         this.Address = new SimpleStringProperty(address);
         AdventureDateTime = new Date(1999, 12, 1);
-        AdventureId = new SimpleIntegerProperty(1);
+        AdventureId = 1;
     }
+
+    public Integer getAdventureId() {
+        return AdventureId;
+    }
+
+    public Integer adventureIdProperty() {
+        return AdventureId;
+    }
+
 
 
     public Date getAdventureDateTime() {

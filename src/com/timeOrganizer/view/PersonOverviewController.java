@@ -2,6 +2,7 @@ package com.timeOrganizer.view;
 
 import com.timeOrganizer.Main;
 import com.timeOrganizer.model.Person;
+import com.timeOrganizer.util.DataBaseConnection;
 import com.timeOrganizer.util.DateUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,7 +33,16 @@ public class PersonOverviewController {
     private Button myPersonsButton;
 
     @FXML
+    private Button addToMyButton;
+
+    @FXML
     private Button backButton;
+
+    @FXML
+    private Button deleteButton;
+
+    @FXML
+    private TextField newFriendEmailTextField;
 
     private Main main;
 
@@ -75,6 +85,21 @@ public class PersonOverviewController {
         main.showStartPage();
     }
 
+    @FXML
+    private void addToMyButtonClicked() {
+        DataBaseConnection.addFriend(newFriendEmailTextField.getText());
+        main.friendsData = DataBaseConnection.GetFriends();
+        personTable.setItems(main.getFriendsData());
+
+    }
+
+    @FXML
+    private void deleteButtonClicked() {
+        DataBaseConnection.deleteFriend(newFriendEmailTextField.getText());
+        main.friendsData = DataBaseConnection.GetFriends();
+        personTable.setItems(main.getFriendsData());
+
+    }
     @FXML
     private void allPersonsButtonClicked() {
         personTable.setItems(main.getPersonData());

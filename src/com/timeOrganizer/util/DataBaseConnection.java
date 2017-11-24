@@ -2,7 +2,7 @@ package com.timeOrganizer.util;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import java.util.Observable;
 
@@ -190,6 +190,97 @@ public class DataBaseConnection {
             e.printStackTrace();
         }
         return myAdventureData;
+    }
+
+    public static void addFriend(String newFriendEmail) {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.createStatement();
+            String sql = "INSERT INTO dbo.FriendsTable VALUES (?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, ActualSessionInfo.getInstance().getActualUserEmail());
+            preparedStatement.setString(2, newFriendEmail);
+
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteFriend(String friendEmail) {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.createStatement();
+            String sql = "Delete from dbo.FriendsTable WHERE Email1 = ? AND Email2 = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, ActualSessionInfo.getInstance().getActualUserEmail());
+            preparedStatement.setString(2, friendEmail);
+
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addAdventure(Integer adventureId) {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.createStatement();
+            String sql = "INSERT INTO dbo.ParticipantsTable VALUES (?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, ActualSessionInfo.getInstance().getActualUserEmail());
+            preparedStatement.setString(2, adventureId.toString());
+
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void createAdventure(Date adventureDate, String adventureName, String adventureAddress) {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.createStatement();
+            String sql = "INSERT INTO dbo.AdventuresTable VALUES (?,?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setDate(1, adventureDate);
+            preparedStatement.setString(2, adventureName);
+            preparedStatement.setString(3, adventureAddress);
+
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteAdventure(Integer adventureId) {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.createStatement();
+            String sql = "Delete from dbo.ParticipantsTable WHERE UserEmail = ? AND AdventureId = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, ActualSessionInfo.getInstance().getActualUserEmail());
+            preparedStatement.setString(2, adventureId.toString());
+
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     // Connect to your database.

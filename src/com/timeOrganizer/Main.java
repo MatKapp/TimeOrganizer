@@ -5,10 +5,7 @@ import java.io.IOException;
 import com.timeOrganizer.model.Adventure;
 import com.timeOrganizer.model.Person;
 import com.timeOrganizer.util.DataBaseConnection;
-import com.timeOrganizer.view.AdventureOverviewController;
-import com.timeOrganizer.view.PersonOverviewController;
-import com.timeOrganizer.view.LogInController;
-import com.timeOrganizer.view.StartViewController;
+import com.timeOrganizer.view.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,18 +21,20 @@ public class Main extends Application {
 
     private ObservableList<Person> personData = FXCollections.observableArrayList();
     public ObservableList<Person> friendsData = FXCollections.observableArrayList();
-    private ObservableList<Adventure> allAdventureData = FXCollections.observableArrayList();
+    public ObservableList<Adventure> allAdventureData = FXCollections.observableArrayList();
     public ObservableList<Adventure> myAdventureData = FXCollections.observableArrayList();
     private Stage primaryStage;
     private BorderPane rootLayout;
 
     public Main() {
         DataBaseConnection dbHandle = new DataBaseConnection();
+
         personData = DataBaseConnection.GetUsers();
         allAdventureData = DataBaseConnection.GetAdventures();
         //myAdventureData = DataBaseConnection.GetMyAdventures();
         //friendsData = DataBaseConnection.GetFriends();
     }
+
 
     public ObservableList<Person> getPersonData() {
         return personData;
@@ -81,6 +80,8 @@ public class Main extends Application {
     public void showStartPage() {
         try {
             // Load StartView overview.
+            personData = DataBaseConnection.GetUsers();
+            allAdventureData = DataBaseConnection.GetAdventures();
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/StartView.fxml"));
             AnchorPane Start = loader.load();
@@ -109,6 +110,7 @@ public class Main extends Application {
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
+            primaryStage.setMaximized(true);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -149,6 +151,46 @@ public class Main extends Application {
 
             // Give the controller access to the main app.
             AdventureOverviewController controller = loader.getController();
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void setAllAdventureData(ObservableList<Adventure> allAdventureData) {
+        this.allAdventureData = allAdventureData;
+    }
+
+    public void showAdventureCretorOverview() {
+        try {
+            // Load adventure overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/addAdventureView.fxml"));
+            AnchorPane addAdventureOverview = loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(addAdventureOverview);
+
+            // Give the controller access to the main app.
+            addAdventureController controller = loader.getController();
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showAdventureOrganizerCretorOverview() {
+        try {
+            // Load adventure overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/addAdventureOrganizerView.fxml"));
+            AnchorPane addAdventureOrganizerOverview = loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(addAdventureOrganizerOverview);
+
+            // Give the controller access to the main app.
+            addAdventureOrganizerController controller = loader.getController();
             controller.setMainApp(this);
         } catch (IOException e) {
             e.printStackTrace();

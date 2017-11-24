@@ -29,6 +29,12 @@ public class LogInController {
     @FXML
     private Label UserLogInLabel;
 
+
+    @FXML
+    private void organizerLogInButtonClicked() {
+        main.showAdventureOrganizerCretorOverview();
+    }
+
     @FXML
     private void UserLogInButtonClicked(Event event) throws IOException {
         System.out.println("Udalo sie");

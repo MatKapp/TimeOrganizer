@@ -3,10 +3,12 @@ package com.timeOrganizer.view;
 import com.timeOrganizer.Main;
 import com.timeOrganizer.model.Adventure;
 import com.timeOrganizer.model.Person;
+import com.timeOrganizer.util.DataBaseConnection;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 public class AdventureOverviewController {
+
 
     @FXML
     private Label adventureDateLabel;
@@ -18,7 +20,10 @@ public class AdventureOverviewController {
     private Label adventureAddressLabel;
 
     @FXML
-    private TableView<Adventure> adventureTable;
+    private Label adventureIdLabel;
+
+    @FXML
+    public TableView<Adventure> adventureTable;
     @FXML
     private TableColumn<Adventure, String> adventureNameColumn;
     @FXML
@@ -28,10 +33,24 @@ public class AdventureOverviewController {
     private Button myAdventuresOverviewButton;
 
     @FXML
+    private Button addAdventureButton;
+
+    @FXML
+    private Button deleteAdventureButton;
+
+
+    @FXML
     private Button allAdventuresOverview;
 
     @FXML
     private Button backButton;
+
+    @FXML
+    private Button adventureCretorButton;
+
+
+    @FXML
+    private TextField adventureIdTextField;
 
     private Main main;
 
@@ -39,17 +58,41 @@ public class AdventureOverviewController {
     }
 
 
+    @FXML
+    private void adventureCretorButtonClicked() {
+        main.showAdventureCretorOverview();
+
+    }
+
+    @FXML
+    private void addAdventureButtonClicked() {
+        DataBaseConnection.addAdventure(Integer.parseInt(adventureIdTextField.getText()));
+        main.myAdventureData = DataBaseConnection.GetMyAdventures();
+        adventureTable.setItems(main.getMyAdventureData());
+
+    }
+
+
+    @FXML
+    private void deleteAdventureButtonClicked() {
+        DataBaseConnection.deleteAdventure(Integer.parseInt(adventureIdTextField.getText()));
+        main.myAdventureData = DataBaseConnection.GetMyAdventures();
+        adventureTable.setItems(main.getMyAdventureData());
+
+    }
     private void showAdventureDetails(Adventure adventure) {
         if (adventure != null) {
             // Fill the labels with info from the person object.
             adventureDateLabel.setText(adventure.getAdventureDateTime().toString());
             adventureNameLabel.setText(adventure.getName());
             adventureAddressLabel.setText(adventure.getAddress());
+            adventureIdLabel.setText(adventure.getAdventureId().toString());
         } else {
             // Person is null, remove all the text.
             adventureDateLabel.setText("");
             adventureNameLabel.setText("");
             adventureAddressLabel.setText("");
+            adventureIdLabel.setText("");
         }
     }
 
@@ -66,7 +109,6 @@ public class AdventureOverviewController {
         // Listen for selection changes and show the person details when changed.
         adventureTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showAdventureDetails(newValue));
-
     }
 
     /**
@@ -98,6 +140,7 @@ public class AdventureOverviewController {
     private void backButtonClicked() {
         main.showStartPage();
     }
+
 
     @FXML
     private void myAdventuresButtonClicked() {
