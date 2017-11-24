@@ -15,6 +15,13 @@ public class Adventure {
     private final StringProperty Address;
 
 
+    public Adventure(int adventureId, Date adventureDateTime, String name, String address) {
+        AdventureId = new SimpleIntegerProperty(adventureId);
+        AdventureDateTime = adventureDateTime;
+        Name = new SimpleStringProperty(name);
+        Address = new SimpleStringProperty(address);
+    }
+
     public Adventure(String name, String address) {
         this.Name = new SimpleStringProperty(name);
         this.Address = new SimpleStringProperty(address);

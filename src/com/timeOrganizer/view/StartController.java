@@ -1,6 +1,7 @@
 package com.timeOrganizer.view;
 
 import com.timeOrganizer.Main;
+import com.timeOrganizer.model.ActualSessionInfo;
 import com.timeOrganizer.model.Person;
 import com.timeOrganizer.util.DataBaseConnection;
 import javafx.collections.ObservableList;
@@ -35,8 +36,10 @@ public class StartController {
         Connection conn = DataBaseConnection.getConnection();
         ObservableList<Person> Persons = DataBaseConnection.GetUsers();
         for (Person person : Persons) {
-            if (person.getFirstName().replaceAll("\\s", "").equals(UserLogInTextField.getText())) {
+            if (person.getEmailAddress().replaceAll("\\s", "").equals(UserLogInTextField.getText())) {
                 //showPersonOverviewPage(event);
+                ActualSessionInfo actualSessionInfo = ActualSessionInfo.getInstance();
+                actualSessionInfo.setActualUserEmail(UserLogInTextField.getText());
                 main.showPersonOverview();
             }
         }

@@ -2,10 +2,14 @@ package com.timeOrganizer.util;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Observable;
 
+import com.timeOrganizer.model.Adventure;
 import com.timeOrganizer.model.Person;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
@@ -69,6 +73,82 @@ public class DataBaseConnection {
             e.printStackTrace();
         }
         return personData;
+    }
+
+
+    public static ObservableList<Adventure> GetAdventures() {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        ObservableList<Adventure> adventureData = FXCollections.observableArrayList();
+        try {
+            stmt = connection.createStatement();
+            String sql = "SELECT * FROM dbo.AdventuresTable";
+            rs = stmt.executeQuery(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            //STEP 5: Extract data from result set
+            while (rs.next()) {
+                //Retrieve by column name
+                Adventure adventure = new Adventure(rs.getInt(1), rs.getDate(2), rs.getString(3), rs.getString(4));
+                int AdventureId = rs.getInt(1);
+                Date AdventureDate = rs.getDate(2);
+                String Name = rs.getString(3);
+                String Address = rs.getString(4);
+                //Display values
+                System.out.print("AdventureId: " + AdventureId);
+                System.out.print("AdventureDate: " + AdventureDate.toString());
+                System.out.print(", Name: " + Name);
+                System.out.print(", Address: " + Address);
+                adventureData.add(adventure);
+
+            }
+            rs.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return adventureData;
+    }
+
+
+    public static ObservableList<Adventure> GetMyAdventures() {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        ObservableList<Adventure> myAdventureData = FXCollections.observableArrayList();
+        try {
+            stmt = connection.createStatement();
+            String sql = "select AdventureId, Date, Name, Address from dbo.ParticipantsTable participant left outer join dbo.AdventuresTable adventures on participant.AdventureId = adventures.Id where participant.UserEmail = 'Kapiszewski@gmail.com'";
+            rs = stmt.executeQuery(sql);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            //STEP 5: Extract data from result set
+            while (rs.next()) {
+                //Retrieve by column name
+                Adventure adventure = new Adventure(rs.getInt(1), rs.getDate(2), rs.getString(3), rs.getString(4));
+                int AdventureId = rs.getInt(1);
+                Date AdventureDate = rs.getDate(2);
+                String Name = rs.getString(3);
+                String Address = rs.getString(4);
+                //Display values
+                System.out.print("AdventureId: " + AdventureId);
+                System.out.print("AdventureDate: " + AdventureDate.toString());
+                System.out.print(", Name: " + Name);
+                System.out.print(", Address: " + Address);
+                myAdventureData.add(adventure);
+
+            }
+            rs.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return myAdventureData;
     }
 
     // Connect to your database.

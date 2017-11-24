@@ -20,14 +20,16 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     private ObservableList<Person> personData = FXCollections.observableArrayList();
-    private ObservableList<Adventure> adventureData = FXCollections.observableArrayList();
+    private ObservableList<Adventure> allAdventureData = FXCollections.observableArrayList();
+    private ObservableList<Adventure> myAdventureData = FXCollections.observableArrayList();
     private Stage primaryStage;
     private BorderPane rootLayout;
 
     public Main() {
         DataBaseConnection dbHandle = new DataBaseConnection();
         personData = DataBaseConnection.GetUsers();
-
+        allAdventureData = DataBaseConnection.GetAdventures();
+        myAdventureData = DataBaseConnection.GetMyAdventures();
     }
 
     public ObservableList<Person> getPersonData() {
@@ -35,8 +37,8 @@ public class Main extends Application {
     }
 
 
-    public ObservableList<Adventure> getAdventureData() {
-        return adventureData;
+    public ObservableList<Adventure> getAllAdventureData() {
+        return allAdventureData;
     }
 
 
@@ -45,7 +47,6 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AddressApp");
         initRootLayout();
-        adventureData.add(new Adventure("U Bazyla", "nie wiem"));
 //        showStartPage();
         showAdventureOverview();
     }
@@ -137,5 +138,9 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public ObservableList<Adventure> getMyAdventureData() {
+        return myAdventureData;
     }
 }

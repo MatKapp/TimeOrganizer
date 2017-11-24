@@ -4,10 +4,7 @@ import com.timeOrganizer.Main;
 import com.timeOrganizer.model.Adventure;
 import com.timeOrganizer.model.Person;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 
 public class AdventureOverviewController {
 
@@ -27,10 +24,17 @@ public class AdventureOverviewController {
     @FXML
     private TableColumn<Adventure, String> adventureAddressColumn;
 
+    @FXML
+    private Button myAdventuresOverviewButton;
+
+    @FXML
+    private Button allAdventuresOverview;
+
     private Main main;
 
     public AdventureOverviewController() {
     }
+
 
     private void showAdventureDetails(Adventure adventure) {
         if (adventure != null) {
@@ -82,10 +86,20 @@ public class AdventureOverviewController {
         }
     }
 
+    @FXML
+    private void allAdventuresButtonClicked() {
+        adventureTable.setItems(main.getAllAdventureData());
+    }
+
+    @FXML
+    private void myAdventuresButtonClicked() {
+        adventureTable.setItems(main.getMyAdventureData());
+    }
+
     public void setMainApp(Main main) {
         this.main = main;
 
         // Add observable list data to the table
-        adventureTable.setItems(main.getAdventureData());
+        adventureTable.setItems(main.getAllAdventureData());
     }
 }
