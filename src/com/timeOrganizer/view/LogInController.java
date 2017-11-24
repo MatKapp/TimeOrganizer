@@ -19,7 +19,7 @@ import javafx.event.ActionEvent;
 import java.io.IOException;
 import java.sql.Connection;
 
-public class StartController {
+public class LogInController {
     @FXML
     private Button UserLogInButton;
     @FXML
@@ -40,7 +40,9 @@ public class StartController {
                 //showPersonOverviewPage(event);
                 ActualSessionInfo actualSessionInfo = ActualSessionInfo.getInstance();
                 actualSessionInfo.setActualUserEmail(UserLogInTextField.getText());
-                main.showPersonOverview();
+                main.myAdventureData = DataBaseConnection.GetMyAdventures();
+                main.friendsData = DataBaseConnection.GetFriends();
+                main.showStartPage();
             }
         }
     }

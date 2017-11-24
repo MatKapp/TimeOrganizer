@@ -30,6 +30,9 @@ public class AdventureOverviewController {
     @FXML
     private Button allAdventuresOverview;
 
+    @FXML
+    private Button backButton;
+
     private Main main;
 
     public AdventureOverviewController() {
@@ -89,6 +92,11 @@ public class AdventureOverviewController {
     @FXML
     private void allAdventuresButtonClicked() {
         adventureTable.setItems(main.getAllAdventureData());
+    }
+
+    @FXML
+    private void backButtonClicked() {
+        main.showStartPage();
     }
 
     @FXML

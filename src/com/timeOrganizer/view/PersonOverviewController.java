@@ -5,10 +5,7 @@ import com.timeOrganizer.model.Person;
 import com.timeOrganizer.util.DateUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,12 +24,15 @@ public class PersonOverviewController {
     private Label lastNameLabel;
     @FXML
     private Label emailLabel;
+
     @FXML
-    private Label postalCodeLabel;
+    private Button allPersonsButton;
+
     @FXML
-    private Label cityLabel;
+    private Button myPersonsButton;
+
     @FXML
-    private Label birthdayLabel;
+    private Button backButton;
 
     private Main main;
 
@@ -70,25 +70,21 @@ public class PersonOverviewController {
 
     }
 
-    /**
-     * Called when the user clicks on the delete button.
-     */
     @FXML
-    private void handleDeletePerson() {
-        int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
-        if (selectedIndex >= 0) {
-            personTable.getItems().remove(selectedIndex);
-        } else {
-            // Nothing selected.
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.initOwner(main.getPrimaryStage());
-            alert.setTitle("No Selection");
-            alert.setHeaderText("No Person Selected");
-            alert.setContentText("Please select a person in the table.");
-
-            alert.showAndWait();
-        }
+    private void backButtonClicked() {
+        main.showStartPage();
     }
+
+    @FXML
+    private void allPersonsButtonClicked() {
+        personTable.setItems(main.getPersonData());
+    }
+
+    @FXML
+    private void myPersonsButtonClicked() {
+        personTable.setItems(main.getFriendsData());
+    }
+
 
     public void setMainApp(Main main) {
         this.main = main;

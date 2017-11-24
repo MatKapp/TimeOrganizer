@@ -7,7 +7,8 @@ import com.timeOrganizer.model.Person;
 import com.timeOrganizer.util.DataBaseConnection;
 import com.timeOrganizer.view.AdventureOverviewController;
 import com.timeOrganizer.view.PersonOverviewController;
-import com.timeOrganizer.view.StartController;
+import com.timeOrganizer.view.LogInController;
+import com.timeOrganizer.view.StartViewController;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,11 +18,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import javax.xml.crypto.Data;
+
 public class Main extends Application {
 
     private ObservableList<Person> personData = FXCollections.observableArrayList();
+    public ObservableList<Person> friendsData = FXCollections.observableArrayList();
     private ObservableList<Adventure> allAdventureData = FXCollections.observableArrayList();
-    private ObservableList<Adventure> myAdventureData = FXCollections.observableArrayList();
+    public ObservableList<Adventure> myAdventureData = FXCollections.observableArrayList();
     private Stage primaryStage;
     private BorderPane rootLayout;
 
@@ -29,11 +33,16 @@ public class Main extends Application {
         DataBaseConnection dbHandle = new DataBaseConnection();
         personData = DataBaseConnection.GetUsers();
         allAdventureData = DataBaseConnection.GetAdventures();
-        myAdventureData = DataBaseConnection.GetMyAdventures();
+        //myAdventureData = DataBaseConnection.GetMyAdventures();
+        //friendsData = DataBaseConnection.GetFriends();
     }
 
     public ObservableList<Person> getPersonData() {
         return personData;
+    }
+
+    public ObservableList<Person> getFriendsData() {
+        return friendsData;
     }
 
 
@@ -47,22 +56,40 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("AddressApp");
         initRootLayout();
-//        showStartPage();
-        showAdventureOverview();
+        showLogInPage();
+        //showAdventureOverview();
     }
 
-    private void showStartPage() {
+    public void showLogInPage() {
         try {
             // Load person overview.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/Start.fxml"));
+            loader.setLocation(Main.class.getResource("view/LogIn.fxml"));
             AnchorPane Start = loader.load();
 
             // Set person overview into the center of root layout.
             rootLayout.setCenter(Start);
 
             // Give the controller access to the main app.
-            StartController controller = loader.getController();
+            LogInController controller = loader.getController();
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void showStartPage() {
+        try {
+            // Load StartView overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/StartView.fxml"));
+            AnchorPane Start = loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(Start);
+
+            // Give the controller access to the main app.
+            StartViewController controller = loader.getController();
             controller.setMainApp(this);
         } catch (IOException e) {
             e.printStackTrace();
