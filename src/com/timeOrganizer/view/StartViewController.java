@@ -37,6 +37,11 @@ public class StartViewController {
         main.showPersonOverview();
     }
 
+    @FXML
+    private void invitationsButtonClicked() {
+        main.showInvitationView();
+    }
+
     private Main main;
 
     public void setMainApp(Main main) {

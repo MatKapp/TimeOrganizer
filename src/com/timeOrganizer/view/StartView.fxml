@@ -30,6 +30,12 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
                     </VBox.margin>
                 </Button>
+                <Button mnemonicParsing="false" onAction="#invitationsButtonClicked" prefHeight="33.0" prefWidth="293.0"
+                        text="Invitations">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </VBox.margin>
+                </Button>
                 <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonClicked" prefHeight="25.0"
                         prefWidth="269.0" stylesheets="@DarkTheme.css" text="Log out">
                     <VBox.margin>

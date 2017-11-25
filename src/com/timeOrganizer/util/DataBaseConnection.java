@@ -8,12 +8,15 @@ import java.util.Observable;
 
 import com.timeOrganizer.model.ActualSessionInfo;
 import com.timeOrganizer.model.Adventure;
+import com.timeOrganizer.model.Invitation;
 import com.timeOrganizer.model.Person;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
+
+import static javax.swing.UIManager.getString;
 
 public class DataBaseConnection {
 
@@ -82,6 +85,7 @@ public class DataBaseConnection {
         Statement stmt = null;
         ResultSet rs = null;
         ObservableList<Person> personData = FXCollections.observableArrayList();
+        ArrayList<String> friendsEmailList = new ArrayList<String>();
         try {
             stmt = connection.createStatement();
             System.out.print(ActualSessionInfo.getInstance().getActualUserEmail().toString());
@@ -98,6 +102,7 @@ public class DataBaseConnection {
                 //Retrieve by column name
                 personData.add(new Person(rs.getString(1), rs.getString(2), rs.getString(3)));
                 String Email = rs.getString(1);
+                friendsEmailList.add(Email.replaceAll("\\s+", ""));
                 String FirstName = rs.getString(2);
                 String LastName = rs.getString(3);
                 //Display values
@@ -110,6 +115,7 @@ public class DataBaseConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        ActualSessionInfo.getInstance().setFriendsEmailList(friendsEmailList);
         return personData;
     }
 
@@ -192,6 +198,47 @@ public class DataBaseConnection {
         return myAdventureData;
     }
 
+
+    public static ObservableList<Invitation> GetMyInvitations() {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        ObservableList<Invitation> myInvitationData = FXCollections.observableArrayList();
+
+        try {
+            stmt = connection.createStatement();
+            String sql = "select InvitationId, SenderEmail, Name from dbo.InvitationsTable invitation left outer join dbo.AdventuresTable adventure on invitation.AdventureId =  adventure.Id where invitation.ReceiverEmail = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, ActualSessionInfo.getInstance().getActualUserEmail());
+
+            rs = preparedStatement.executeQuery();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            //STEP 5: Extract data from result set
+            while (rs.next()) {
+                //Retrieve by column name
+                Invitation invitation = new Invitation(rs.getInt(1), rs.getString(2), rs.getString(3));
+                int InvitationId = rs.getInt(1);
+
+                String Sender = rs.getString(2);
+                String Name = rs.getString(3);
+                //Display values
+                System.out.print("InvitationId: " + InvitationId);
+                System.out.print("Receiver: " + Sender.toString());
+                System.out.print(", Name: " + Name);
+                myInvitationData.add(invitation);
+
+            }
+            rs.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return myInvitationData;
+    }
+
     public static void addFriend(String newFriendEmail) {
         //STEP 4: Execute a query
         System.out.println("Creating statement...");
@@ -210,6 +257,24 @@ public class DataBaseConnection {
         }
     }
 
+    public static void addInvitation(String receiver, Integer adventureId) {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.createStatement();
+            String sql = "INSERT INTO dbo.InvitationsTable VALUES (?,?,?)";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, ActualSessionInfo.getInstance().getActualUserEmail());
+            preparedStatement.setString(2, receiver);
+            preparedStatement.setInt(3, adventureId);
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void deleteFriend(String friendEmail) {
         //STEP 4: Execute a query
         System.out.println("Creating statement...");
@@ -221,6 +286,23 @@ public class DataBaseConnection {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, ActualSessionInfo.getInstance().getActualUserEmail());
             preparedStatement.setString(2, friendEmail);
+
+            preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteInvitation(Integer adventureId) {
+        //STEP 4: Execute a query
+        System.out.println("Creating statement...");
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            stmt = connection.createStatement();
+            String sql = "Delete from dbo.InvitationsTable WHERE InvitationId = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, adventureId);
 
             preparedStatement.executeUpdate();
         } catch (Exception e) {

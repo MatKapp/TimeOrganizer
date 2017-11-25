@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerView.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/model/Invitation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/InvitationsView.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/InvitationsViewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TimeOrganizer/com/timeOrganizer/Main.class" afterPath="$PROJECT_DIR$/out/production/TimeOrganizer/com/timeOrganizer/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TimeOrganizer/com/timeOrganizer/view/PersonOverviewController.class" afterPath="$PROJECT_DIR$/out/production/TimeOrganizer/com/timeOrganizer/view/PersonOverviewController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TimeOrganizer/com/timeOrganizer/view/PersonOverview.fxml" afterPath="$PROJECT_DIR$/out/production/TimeOrganizer/com/timeOrganizer/view/PersonOverview.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/Main.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/model/Adventure.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/model/Adventure.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/model/ActualSessionInfo.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/model/ActualSessionInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/util/DataBaseConnection.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/util/DataBaseConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverview.fxml" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverview.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverviewController.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverviewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/LogIn.fxml" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/LogIn.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/LogInController.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/LogInController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverview.fxml" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverview.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverviewController.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverviewController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/StartView.fxml" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/StartView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/timeOrganizer/view/StartViewController.java" afterPath="$PROJECT_DIR$/src/com/timeOrganizer/view/StartViewController.java" />
     </list>
@@ -93,136 +86,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LogIn.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/LogIn.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdventureOverviewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverviewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3920#3921#0" expanded="true" />
-                <element signature="e#3987#3988#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogInController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/LogInController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-              <folding>
-                <element signature="e#854#855#0" expanded="true" />
-                <element signature="e#913#914#0" expanded="true" />
-                <element signature="method#showPersonOverviewPage#0;class#LogInController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="192" column="42" lean-forward="false" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addAdventureView.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="34" column="107" lean-forward="false" selection-start-line="34" selection-start-column="82" selection-end-line="34" selection-end-column="107" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addAdventureController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addAdventureOrganizerView.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="83" lean-forward="true" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addAdventureOrganizerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartView.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/StartView.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartViewController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/StartViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#610#611#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#710#711#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -240,6 +104,9 @@
       <find>stage</find>
       <find>addAd</find>
       <find>back</find>
+      <find>Get</find>
+      <find>GetMy</find>
+      <find>GetMyAd</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -269,22 +136,25 @@
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/RootLayout.fxml" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/Start.fxml" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/model/Person.java" />
-        <option value="$PROJECT_DIR$/src/com/timeOrganizer/model/ActualSessionInfo.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/StartController.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverview.fxml" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverviewController.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureView.fxml" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverview.fxml" />
-        <option value="$PROJECT_DIR$/src/com/timeOrganizer/util/DataBaseConnection.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/model/Adventure.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverviewController.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/StartView.fxml" />
-        <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/StartViewController.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerView.fxml" />
-        <option value="$PROJECT_DIR$/src/com/timeOrganizer/Main.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerController.java" />
-        <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/LogInController.java" />
         <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureController.java" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/model/ActualSessionInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/model/Invitation.java" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/StartViewController.java" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/InvitationsView.fxml" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/LogInController.java" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/util/DataBaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/com/timeOrganizer/view/InvitationsViewController.java" />
       </list>
     </option>
   </component>
@@ -296,10 +166,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="666" />
-    <option name="y" value="-25" />
-    <option name="width" value="1119" />
-    <option name="height" value="961" />
+    <option name="x" value="734" />
+    <option name="y" value="23" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -320,9 +190,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -385,6 +254,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -406,17 +276,17 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
-    <property name="SearchEverywhereHistoryKey" value="Impra u Bazyla&#9;null&#9;null&#10;DataBase&#9;FILE&#9;file://C:/Users/mateu/IdeaProjects/TimeOrganizer/src/com/timeOrganizer/util/DataBaseConnection.java&#10;nameProp&#9;PSI&#9;JAVA://com.timeOrganizer.model.Adventure#nameProperty" />
+    <property name="SearchEverywhereHistoryKey" value="GetMyAd&#9;PSI&#9;JAVA://com.timeOrganizer.Main#getMyAdventureData&#10;Impra u Bazyla&#9;null&#9;null&#10;DataBase&#9;FILE&#9;file://C:/Users/mateu/IdeaProjects/TimeOrganizer/src/com/timeOrganizer/util/DataBaseConnection.java&#10;nameProp&#9;PSI&#9;JAVA://com.timeOrganizer.model.Adventure#nameProperty" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\mateu\IdeaProjects\TimeOrganizer\src\com\timeOrganizer\views" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mateu\IdeaProjects\TimeOrganizer\src\com\timeOrganizer\view" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.timeOrganizer.view" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mateu\IdeaProjects\TimeOrganizer\src\com\timeOrganizer\view" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mateu\IdeaProjects\TimeOrganizer\src\com\timeOrganizer\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -573,7 +443,11 @@
       <workItem from="1511373282345" duration="1462000" />
       <workItem from="1511427451793" duration="4856000" />
       <workItem from="1511439561830" duration="31051000" />
-      <workItem from="1511544422134" duration="14226000" />
+      <workItem from="1511544422134" duration="14874000" />
+      <workItem from="1511608086728" duration="560000" />
+      <workItem from="1511633278561" duration="12221000" />
+      <workItem from="1511650224762" duration="1662000" />
+      <workItem from="1511651918818" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1510757717260</created>
@@ -624,37 +498,42 @@
       <option name="project" value="LOCAL" />
       <updated>1511544496007</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Organizer can create adventures">
+      <created>1511563661301</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511563661301</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79660000" />
+    <option name="totallyTimeSpent" value="94795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3902439" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38972163" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1640625" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39322916" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32767764" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3308351" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -662,6 +541,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -685,12 +565,13 @@
     <MESSAGE value="AdventureOverview view and controller" />
     <MESSAGE value="Participants ans my Adventures" />
     <MESSAGE value="Login Start Friends Adventures Back, Prapared statement for friends and my adventures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Start Friends Adventures Back, Prapared statement for friends and my adventures" />
+    <MESSAGE value="Organizer can create adventures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organizer can create adventures" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -699,35 +580,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TimeOrganizer.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/gradle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/description.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -736,62 +588,60 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverview.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverview.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
-            <marker date="1511547081476" expanded="true" signature="5135:5167" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5197" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5218" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5239" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5255" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5269" ph="..." />
+            <marker date="1511563655677" expanded="true" signature="5718:5750" ph="..." />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/RootLayout.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/RootLayout.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/controller/Controller.java">
@@ -818,14 +668,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-9.0.1/lib/src.zip!/javafx.graphics/com/sun/javafx/application/LauncherImpl.java">
@@ -864,14 +714,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/RootLayout.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
@@ -886,7 +736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
           <caret line="80" column="1" lean-forward="false" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,21 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="347" column="35" lean-forward="false" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/util/Callback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/model/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -961,10 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="2408" column="0" lean-forward="false" selection-start-line="2408" selection-start-column="0" selection-end-line="2408" selection-end-column="0" />
-          <folding>
-            <element signature="e#81787#81788#0" expanded="false" />
-            <element signature="e#81827#81828#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,66 +802,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding>
-            <element signature="e#3264#3265#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/model/ActualSessionInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-          <folding>
-            <element signature="e#194#195#0" expanded="false" />
-            <element signature="e#228#229#0" expanded="false" />
-            <element signature="e#345#346#0" expanded="false" />
-            <element signature="e#407#408#0" expanded="false" />
-            <element signature="e#456#457#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverview.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding>
-            <marker date="1511547081476" expanded="true" signature="5135:5167" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5197" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5218" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5239" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5255" ph="..." />
-            <marker date="1511547081476" expanded="true" signature="5135:5269" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="87" column="7" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="101" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#PersonOverviewController#0" expanded="false" />
-            <element signature="e#2816#2817#0" expanded="true" />
-            <element signature="e#2874#2875#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverview.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
-            <marker date="1511559296181" expanded="true" signature="5537:5569" ph="..." />
+            <marker date="1511563655636" expanded="true" signature="6220:6252" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="111" lean-forward="false" selection-start-line="36" selection-start-column="86" selection-end-line="36" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="88" lean-forward="false" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/LogIn.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#967#968#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1040,18 +875,127 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverview.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <marker date="1511563655677" expanded="true" signature="5718:5750" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/StartView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <folding>
+            <marker date="1511608650748" expanded="true" signature="2304:2340" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/StartViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/util/Callback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding>
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/PersonOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="99" column="34" lean-forward="false" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
+          <folding>
+            <element signature="method#initialize#0;class#PersonOverviewController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/InvitationsView.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="160" lean-forward="false" selection-start-line="65" selection-start-column="131" selection-end-line="65" selection-end-column="160" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/InvitationsViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="49" column="48" lean-forward="false" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+          <folding>
+            <element signature="method#showInvitationDetails#0;class#InvitationsViewController#0" expanded="false" />
+            <element signature="method#initialize#0;class#InvitationsViewController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/javafx-src.zip!/javafx/scene/control/TextInputControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="347" column="35" lean-forward="false" selection-start-line="347" selection-start-column="35" selection-end-line="347" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/LogInController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="method#showPersonOverviewPage#0;class#LogInController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/util/DataBaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="261" column="46" lean-forward="true" selection-start-line="261" selection-start-column="46" selection-end-line="261" selection-end-column="46" />
+        <state relative-caret-position="606">
+          <caret line="295" column="61" lean-forward="false" selection-start-line="295" selection-start-column="61" selection-end-line="295" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Connect#0;class#DataBaseConnection#0" expanded="false" />
@@ -1059,128 +1003,61 @@
             <element signature="method#GetFriends#0;class#DataBaseConnection#0" expanded="false" />
             <element signature="method#GetAdventures#0;class#DataBaseConnection#0" expanded="false" />
             <element signature="method#GetMyAdventures#0;class#DataBaseConnection#0" expanded="false" />
+            <element signature="method#GetMyInvitations#0;class#DataBaseConnection#0" expanded="false" />
+            <element signature="method#addFriend#0;class#DataBaseConnection#0" expanded="false" />
+            <element signature="method#deleteFriend#0;class#DataBaseConnection#0" expanded="false" />
+            <element signature="method#deleteInvitation#0;class#DataBaseConnection#0" expanded="false" />
+            <element signature="method#addAdventure#0;class#DataBaseConnection#0" expanded="false" />
+            <element signature="method#createAdventure#0;class#DataBaseConnection#0" expanded="false" />
+            <element signature="method#deleteAdventure#0;class#DataBaseConnection#0" expanded="false" />
             <element signature="method#DataBaseConnection#0;class#DataBaseConnection#0" expanded="false" />
-            <marker date="1511555406087" expanded="true" signature="1629:1657" ph="SELECT * FRO... UserTable" />
-            <marker date="1511555406087" expanded="true" signature="2985:3140" ph="select Email... FriendsTable" />
-            <marker date="1511555406087" expanded="true" signature="2985:3141" ph="select Email... FriendsTable" />
-            <marker date="1511555406087" expanded="true" signature="2985:3142" ph="select Email... FriendsTable" />
-            <marker date="1511555406087" expanded="true" signature="2985:3143" ph="select Email... FriendsTable" />
-            <marker date="1511555406087" expanded="true" signature="4580:4613" ph="SELECT * FRO... AdventuresTable" />
-            <marker date="1511555406087" expanded="true" signature="6061:6260" ph="select Adven... " />
-            <marker date="1511555406087" expanded="true" signature="6061:6261" ph="select Adven... " />
-            <marker date="1511555406087" expanded="true" signature="7810:7851" ph="INSERT INTO dbo.FriendsTable... " />
-            <marker date="1511555406087" expanded="true" signature="8519:8579" ph="Delete from " />
-            <marker date="1511555406087" expanded="true" signature="9246:9292" ph="INSERT INTO dbo.FriendsTable... " />
-            <marker date="1511555406087" expanded="true" signature="10018:10064" ph="INSERT INTO dbo.ParticipantsTable... " />
-            <marker date="1511555406087" expanded="true" signature="10755:10828" ph="Delete from " />
+            <marker date="1511650775343" expanded="true" signature="1720:1748" ph="SELECT * FRO... UserTable" />
+            <marker date="1511650775343" expanded="true" signature="3145:3300" ph="select Email... FriendsTable" />
+            <marker date="1511650775343" expanded="true" signature="3145:3301" ph="select Email... FriendsTable" />
+            <marker date="1511650775343" expanded="true" signature="3145:3302" ph="select Email... FriendsTable" />
+            <marker date="1511650775343" expanded="true" signature="3145:3303" ph="select Email... FriendsTable" />
+            <marker date="1511650775343" expanded="true" signature="4886:4919" ph="SELECT * FRO... AdventuresTable" />
+            <marker date="1511650775343" expanded="true" signature="6367:6566" ph="select Adven... " />
+            <marker date="1511650775343" expanded="true" signature="6367:6567" ph="select Adven... " />
+            <marker date="1511650775343" expanded="true" signature="8217:8414" ph="select Adven... " />
+            <marker date="1511650775343" expanded="true" signature="8217:8415" ph="select Invit... InvitationsTable" />
+            <marker date="1511650775343" expanded="true" signature="9836:9877" ph="INSERT INTO dbo.FriendsTable... " />
+            <marker date="1511650775343" expanded="true" signature="10565:10612" ph="INSERT INTO dbo.FriendsTable... " />
+            <marker date="1511650775343" expanded="true" signature="11328:11388" ph="Delete from " />
+            <marker date="1511650775343" expanded="true" signature="12059:12114" ph="Delete from " />
+            <marker date="1511650775343" expanded="true" signature="12680:12726" ph="INSERT INTO dbo.FriendsTable... " />
+            <marker date="1511650775343" expanded="true" signature="13453:13499" ph="INSERT INTO dbo.ParticipantsTable... " />
+            <marker date="1511650775343" expanded="true" signature="14192:14265" ph="Delete from " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="34" column="107" lean-forward="false" selection-start-line="34" selection-start-column="82" selection-end-line="34" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/AdventureOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3920#3921#0" expanded="true" />
-            <element signature="e#3987#3988#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="83" lean-forward="true" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="192" column="42" lean-forward="false" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/StartView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/LogIn.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="jar://$USER_HOME$/Desktop/JDBC/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar!/com/microsoft/sqlserver/jdbc/SQLServerConnection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <caret line="1939" column="0" lean-forward="false" selection-start-line="1939" selection-start-column="0" selection-end-line="1939" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/StartViewController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/model/Invitation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/LogInController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/model/ActualSessionInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state relative-caret-position="340">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="method#showPersonOverviewPage#0;class#LogInController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureOrganizerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/timeOrganizer/view/addAdventureController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#548#556#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
       </provider>

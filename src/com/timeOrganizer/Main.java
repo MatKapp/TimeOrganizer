@@ -3,6 +3,7 @@ package com.timeOrganizer;
 import java.io.IOException;
 
 import com.timeOrganizer.model.Adventure;
+import com.timeOrganizer.model.Invitation;
 import com.timeOrganizer.model.Person;
 import com.timeOrganizer.util.DataBaseConnection;
 import com.timeOrganizer.view.*;
@@ -15,16 +16,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-import javax.xml.crypto.Data;
-
 public class Main extends Application {
 
     private ObservableList<Person> personData = FXCollections.observableArrayList();
     public ObservableList<Person> friendsData = FXCollections.observableArrayList();
     public ObservableList<Adventure> allAdventureData = FXCollections.observableArrayList();
     public ObservableList<Adventure> myAdventureData = FXCollections.observableArrayList();
+    public ObservableList<Invitation> invitationsData = FXCollections.observableArrayList();
     private Stage primaryStage;
     private BorderPane rootLayout;
+    public ObservableList<Invitation> myInvitationsData;
 
     public Main() {
         DataBaseConnection dbHandle = new DataBaseConnection();
@@ -35,6 +36,13 @@ public class Main extends Application {
         //friendsData = DataBaseConnection.GetFriends();
     }
 
+    public ObservableList<Invitation> getInvitationsData() {
+        return invitationsData;
+    }
+
+    public void setInvitationsData(ObservableList<Invitation> invitationsData) {
+        this.invitationsData = invitationsData;
+    }
 
     public ObservableList<Person> getPersonData() {
         return personData;
@@ -48,7 +56,6 @@ public class Main extends Application {
     public ObservableList<Adventure> getAllAdventureData() {
         return allAdventureData;
     }
-
 
     @Override
     public void start(Stage primaryStage) {
@@ -211,5 +218,24 @@ public class Main extends Application {
 
     public ObservableList<Adventure> getMyAdventureData() {
         return myAdventureData;
+    }
+
+
+    public void showInvitationView() {
+        try {
+            // Load adventure overview.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/InvitationsView.fxml"));
+            AnchorPane InvitationsViewController = loader.load();
+
+            // Set person overview into the center of root layout.
+            rootLayout.setCenter(InvitationsViewController);
+
+            // Give the controller access to the main app.
+            InvitationsViewController controller = loader.getController();
+            controller.setMainApp(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

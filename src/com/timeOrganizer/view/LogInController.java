@@ -46,6 +46,8 @@ public class LogInController {
                 //showPersonOverviewPage(event);
                 ActualSessionInfo actualSessionInfo = ActualSessionInfo.getInstance();
                 actualSessionInfo.setActualUserEmail(UserLogInTextField.getText());
+                //main.myInvitationsData= DataBaseConnection.GetMyInvitations();
+                main.setInvitationsData(DataBaseConnection.GetMyInvitations());
                 main.myAdventureData = DataBaseConnection.GetMyAdventures();
                 main.friendsData = DataBaseConnection.GetFriends();
                 main.showStartPage();
